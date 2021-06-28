@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="ParkFinder.Views.ParkingPages.ExploreMapPage">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+            <maps:Map x:Name="Map" MapType="Street" HasZoomEnabled="True" 
+                      AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                      AbsoluteLayout.LayoutFlags="All"/>
+
+            <!--<Grid AbsoluteLayout.LayoutBounds="0.7,0.7,0.9,0.3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+
+                </Grid.RowDefinitions>
+                <ScrollView BackgroundColor="White" Grid.Row="1"  Orientation="Horizontal">
+                    <StackLayout x:Name="parkingsLayout" Spacing="7"  Padding="5,2" Orientation="Horizontal">
+
+                    </StackLayout>
+                </ScrollView>
+            </Grid>-->
+
+            <ScrollView BackgroundColor="White" AbsoluteLayout.LayoutBounds="3,0.7,400,190"
+                        AbsoluteLayout.LayoutFlags="XProportional,YProportional"
+                         Orientation="Horizontal">
+                <StackLayout x:Name="parkingsLayout" Spacing="7" HeightRequest="190"  Padding="5,2" Orientation="Horizontal">
+                    
+                </StackLayout>
+            </ScrollView>
+            
+        </AbsoluteLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

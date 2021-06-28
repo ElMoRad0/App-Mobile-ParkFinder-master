@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParkFinder.Views.Credit.CreditSoldePage"
+             Title="Credit Balance :">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Choose a plan offer, or input the ammount you want :" FontSize="Title" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" />
+
+            <BoxView Color="DarkGray" HeightRequest="1" HorizontalOptions="Center" WidthRequest="350" />
+            <StackLayout Margin="15,15,0,15">
+                <Label Text="This month offers :" FontSize="Subtitle" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" VerticalOptions="Start" />
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BorderColor="Blue" BackgroundColor="LightGreen" CornerRadius="20" >
+                            <StackLayout>
+                                <Label HorizontalTextAlignment="Center" Text="500P" TextColor="Green" FontSize="Title" />
+                                <Label HorizontalTextAlignment="Center" Text="50 DH only" TextColor="Blue" FontSize="Subtitle" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BorderColor="Blue" BackgroundColor="Green" CornerRadius="20" >
+                            <StackLayout>
+                                <Label HorizontalTextAlignment="Center" Text="100P" TextColor="LightGreen" FontSize="Title" />
+                                <Label HorizontalTextAlignment="Center" Text="10 DH only" TextColor="Cyan" FontSize="Subtitle" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BorderColor="Blue" BackgroundColor="LightGreen" CornerRadius="20" >
+                            <StackLayout>
+                                <Label HorizontalTextAlignment="Center" Text="200P" TextColor="Green" FontSize="Title" />
+                                <Label HorizontalTextAlignment="Center" Text="20 DH only" TextColor="Blue" FontSize="Subtitle" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BorderColor="Blue" BackgroundColor="LightGreen" CornerRadius="20" >
+                            <StackLayout>
+                                <Label HorizontalTextAlignment="Center" Text="300P" TextColor="Green" FontSize="Title" />
+                                <Label HorizontalTextAlignment="Center" Text="30 DH only" TextColor="Blue" FontSize="Subtitle" />
+                            </StackLayout>
+                        </Frame>
+
+
+                        <Frame BorderColor="Blue" BackgroundColor="LightGreen" CornerRadius="20" >
+                            <StackLayout>
+                                <Label HorizontalTextAlignment="Center" Text="400P" TextColor="Green" FontSize="Title" />
+                                <Label HorizontalTextAlignment="Center" Text="40 DH only" TextColor="Blue" FontSize="Subtitle" />
+                            </StackLayout>
+                        </Frame>
+
+
+                        <Frame BorderColor="Blue" BackgroundColor="LightGreen" CornerRadius="20" >
+                            <StackLayout>
+                                <Label HorizontalTextAlignment="Center" Text="1000P" TextColor="Green" FontSize="Title" />
+                                <Label HorizontalTextAlignment="Center" Text="100 DH only" TextColor="Blue" FontSize="Subtitle" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BorderColor="Blue" BackgroundColor="LightGreen" CornerRadius="20" >
+                            <StackLayout>
+                                <Label HorizontalTextAlignment="Center" Text="500Pt." TextColor="Green" FontSize="Title" />
+                                <Label HorizontalTextAlignment="Center" Text="50 DH" TextColor="Blue" FontSize="Subtitle" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BorderColor="Blue" BackgroundColor="LightGreen" CornerRadius="20" >
+                            <StackLayout>
+                                <Label HorizontalTextAlignment="Center" Text="5000Pt." TextColor="Green" FontSize="Title" />
+                                <Label HorizontalTextAlignment="Center" Text="200 DH" TextColor="Blue" FontSize="Subtitle" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+
+            <BoxView Color="DarkGray" HeightRequest="1" HorizontalOptions="Center" WidthRequest="350" />
+
+            <StackLayout Margin="15,15,15,0">
+
+                <Label Text="Select Credit Card :" FontSize="Medium" />
+                
+                <Picker Title="Tap to select a credit card"
+                TitleColor="DarkGray"
+                ItemsSource="{Binding Monkeys}"
+                ItemDisplayBinding="{Binding Name}" />
+
+                <Label Text="Enter Wanted ammount:" FontSize="Medium" />
+                <Entry Placeholder="Wanted Credits" />
+
+                <Button Text="Submit" BackgroundColor="DeepSkyBlue" TextColor="Green" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

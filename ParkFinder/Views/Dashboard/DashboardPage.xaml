@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParkFinder.Views.DashboardPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Frame BackgroundColor="#1BACC5" HeightRequest="120" Grid.Row="0">
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Margin="0,15,0,0">
+                        <Label Text="Welcome back" TextColor="WhiteSmoke" FontSize="Title" />
+                        <Label Text="USER" TextColor="White" FontSize="36" />
+                    </StackLayout>
+                    <Image Margin="0,-60,-20,0" Source="mainpage.png" WidthRequest="230" />
+                </StackLayout>
+            </Frame>
+
+            <StackLayout BackgroundColor="White" Grid.Row="1" Grid.RowSpan="2">
+                <Frame BackgroundColor="White" Margin="0,-50,0,0" CornerRadius="20" BorderColor="Transparent" >
+                    <StackLayout>
+                        <Label Text="Get started on ParkFinder ☻" FontSize="Large" TextColor="#1BACC5" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+
+                        <Frame BorderColor="Transparent" CornerRadius="20" >
+                            <StackLayout>
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="8*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="8*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="25*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="25*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Frame BackgroundColor="#1BAC" CornerRadius="10" Grid.Row="0" Grid.Column="1">
+                                        <StackLayout Orientation="Vertical">
+                                            <Image Source="reservation.png" WidthRequest="70" Margin="-10" />
+                                            <Label Text="Make New Reservation" FontSize="Medium" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" />
+
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="MakeReservation_Tapped" />
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Frame BackgroundColor="#1BAC" CornerRadius="10" Grid.Row="0" Grid.Column="3">
+                                        <StackLayout Orientation="Vertical">
+                                            <Image Source="parking.png" WidthRequest="70" Margin="-10" />
+                                            <Label Text="Find Parking" FontSize="Medium" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" />
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="FindParkingRecognizer_Tapped"/>
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Frame BackgroundColor="#1BAC" CornerRadius="10" Grid.Row="2" Grid.Column="1">
+                                        <StackLayout Orientation="Vertical" >
+                                            <Image Source="account.png" WidthRequest="70" Margin="-10" />
+                                            <Label Text="My Account" FontSize="Medium" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" />
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ProfilRecognizer_Tapped"/>
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Frame BackgroundColor="#1BAC" CornerRadius="10" Grid.Row="2" Grid.Column="3" HeightRequest="350">
+                                        <StackLayout Orientation="Vertical">
+
+                                            <Image Source="historique.jpg" WidthRequest="70" Margin="-10" />
+
+
+                                            <Label Text="Historique Reservation" FontSize="Medium" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" />
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="SoldeRecognizer_Tapped"/>
+                                            </StackLayout.GestureRecognizers>
+
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Grid.Row="2">
+
+
+                                    <Label VerticalOptions="Center" Text="Balance:" FontSize="Large" TextColor="#1BACC5" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+                                    <Label VerticalOptions="Center" x:Name="balanceLabel" Text="XXX DH" FontSize="Large" TextColor="#1BACC5" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+
+                                    <Button x:Name="SfButton" WidthRequest="100" TextColor="Azure" BorderColor="blue" BorderWidth="1" CornerRadius="40" Margin="0,0,-1,0" Text="Credits  >" BackgroundColor="#1BACC5" HorizontalOptions="Center"
+                                                                                                Clicked="Button_Clicked" />
+                                </StackLayout>
+                                
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

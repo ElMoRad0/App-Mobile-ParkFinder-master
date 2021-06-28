@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParkFinder.Views.ListParking.ListParkingPage"
+             xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+    <ContentPage.Content>
+        <StackLayout Padding="5" Margin="0">
+            <ListView x:Name="ParkingsListView" RowHeight="120" ItemTapped="ParkingsListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.Column="0" Source="{Binding Img_URL}" />
+
+                                <StackLayout Orientation="Horizontal" Grid.Column="1">
+                                    <StackLayout HorizontalOptions="FillAndExpand">
+                                        <Label Text="{Binding Name}" FontSize="Title"  />
+                                        <Label Text="{Binding Adresse}" FontSize="Subtitle" />
+
+                                        <Label Padding="3" MinimumWidthRequest="50" WidthRequest="50" HorizontalTextAlignment="Center" Text="{Binding Computed_Price}" BackgroundColor="DarkCyan" TextColor="Azure" FontSize="Small"  />
+
+                                    </StackLayout>
+                                    <StackLayout HorizontalOptions="EndAndExpand">
+                                        <Label Text="●" HorizontalTextAlignment="End" TextColor="{Binding Computed_Color}" FontSize="Title" />
+                                        <Label Text="{Binding Computed_State}" FontSize="Medium" />
+                                        <!--<Label Text="{Binding Computed_Percentage}" FontSize="Medium" />-->
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
